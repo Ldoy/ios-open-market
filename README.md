@@ -498,7 +498,29 @@
 
 <br><br>
 
+### 7. merge 후 생긴 충돌 오류
+- 상황 : `3-jiss`에 merge 후 충돌 오류가 생김
 
+    <img src = "https://i.imgur.com/YIUkxfX.png" width = 200 >
+
+    <img src = "https://i.imgur.com/OU04Lzn.png" width = 200 >
+
+- 시도1 : README.md에서 충돌 난 부분을 확인하고 삭제 
+    - 하지만 여전히 project 파일이 열리지 않음 
+
+- 시도2 : xcodeproj 패키지를 열어서 pbxproj 확장자를 가진 파일의 충돌 난 부분 삭제 
+    
+    <img src = "https://i.imgur.com/XcUuUHd.png" width = 200 >
+
+- `pbxproj`
+    - Project는 Application을 빌드하기 위한 파일, 리소스, 정보를 담은 repository. = Package
+    - 충돌이 생긴 이유
+        - 팀 프로젝트에서 커밋을 번갈아 가면서 하면서 해당 파일의 내용이 서로 달라지게 됨. 
+    - 지금과 같은 충돌을 방지하기 위해선 병합관련 사항을 기재한 .gitattributes 파일을 git에 추가하면 관련 문제가 생기지 않는다. 
+
+- 충돌 확인 메세지에 나오지 않았던 이유(커밋기록도 보이지 않음)는 무엇일까?
+
+    <br>
 
 ## V. 아쉽거나 해결하지 못한 부분
 
@@ -708,6 +730,7 @@ func numberOfSections(in collectionView: UICollectionView) -> Int {
 
 </div>
 </details>
+
 
 
 
