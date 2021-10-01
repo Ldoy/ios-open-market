@@ -709,7 +709,5 @@ func numberOfSections(in collectionView: UICollectionView) -> Int {
 </div>
 </details>
 
-
-
-
+![오픈마켓UML-Step1-2](https://user-images.githubusercontent.com/34529917/129679650-387446f0-a239-41aa-9166-f51001c5ab50.png)
 
